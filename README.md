@@ -128,7 +128,7 @@
      event.removeEvent('some', eventEmitter.CLEAR);
   
   
-  //也可删除some事件的多种处理
+  //也可删 除some事件的多种处理
     //例如：
     event.on('some'， fun1, fun1, fun2);
     
