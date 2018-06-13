@@ -102,17 +102,25 @@
   }
   //eventEmitter提供了三种删除自定义事件场景的api,各自的功能不同
   
-  //1.删除some事件的fun1处理（单个）
+  //1.删 除some事件的fun1处理（单个）
      event.on('some'， fun1, fun1);
+     
      //连续绑定多个相同的处理，只想删除其中最早绑定的那一个时，使用
+     
      event.removeEvent('some', eventEmitter.REMOVE, fun1);
+     
      //以上方式和removeEvent默认使用方式等价
      event.removeEvent('some', fun1);
-  //2.删除some事件的所有fun1处理
+     
+  //2.删 除some事件的所有fun1处理
      event.on('some'， fun1, fun1);
+     
      //参数第二项传入eventEmitter.GLOBAL_REMOVE，会删除some事件的所有fun1处理
+     
      event.removeEvent('some', eventEmitter.GLOBAL_REMOVE, fun1);
-  //3.删除some事件的所有处理
+     
+  //3.删 除some事件的所有处理
+  
      event.on('some'， fun1, fun1);
      event.on('some1'， fun1, fun2）;
      //参数第二项传入eventEmitter.CLEAR时，会删除some事件的所有处理
