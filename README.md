@@ -123,6 +123,7 @@
   
      event.on('some'， fun1, fun1);
      event.on('some1'， fun1, fun2）;
+     
      //参数第二项传入eventEmitter.CLEAR时，会删除some事件的所有处理
      event.removeEvent('some', eventEmitter.CLEAR);
   
@@ -130,9 +131,11 @@
   //也可删除some事件的多种处理
     //例如：
     event.on('some'， fun1, fun1, fun2);
+    
     event.removeEvent('some', fun1, fun2);
      或者
     event.removeEvent('some', [fun1, fun2]);
+    
     //处理的传递与`同一事件绑定多个处理`的传递方式相同
   ```
 例子:
